@@ -18,23 +18,26 @@
 <body>
 <header>
 
+
     <div id="headerimages">
         <img src="img/headerimages.png">
     </div>
 
-    <div id="dateBar">
-        <ul>
-            <li>November</li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-        </ul>
-    </div>
 
 </header>
 
 <div id="wrapper">
+
+    <div id="dateBar">
+            <ul>
+                <li>November</li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+            </ul>
+    </div>
+
     [oweoeprweorpor<br/>koweojfiwejfwoeji
 </div>
 
