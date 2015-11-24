@@ -1,0 +1,43 @@
+body {
+    width: 80%;
+    margin: auto;
+    background: url(../img/background.png) no-repeat top;
+    /*-webkit-background-size: cover;*/
+    /*-moz-background-size: cover;*/
+    /*-o-background-size: cover;*/
+    /*background-size: cover;*/
+    /*background-color: black;*/
+}
+
+#headerimages {
+    margin: auto;
+    margin-top: 0;
+    width: 85%;
+}
+
+body #wrapper {
+    background-color: #FFF;
+    width: 67.5%;
+    height: 1000px;
+    margin: auto;
+    margin-top: -1.2em;
+}
+
+#dateBar ul {
+    width: 85%;
+    list-style-type: none;
+    text-align: center;
+    margin: 0%;
+    padding: 0;
+}
+
+#dateBar li {
+    width: auto;
+    display: inline;
+    float: left;
+}
+
+#dateBar a {
+    display: block;
+    width: 60px;
+}
