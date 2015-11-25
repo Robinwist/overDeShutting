@@ -28,14 +28,24 @@
 
 <div id="wrapper">
 
-    <div id="dateBar">
-            <ul>
-                <li>November</li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-            </ul>
+<!--    <div id="dateBar">-->
+<!--            <ul>-->
+<!--                <li>Juli</li>-->
+<!--                <li><a href="#">1</a></li>-->
+<!--                <li><a href="#">2</a></li>-->
+<!--                <li><a href="#">3</a></li>-->
+<!--                <li><a href="#">4</a></li>-->
+<!--            </ul>-->
+<!--    </div>-->
+
+    <div id="numberHolder">
+    <?php
+        echo "<div id='month' class='monthFont'>".date("M")."</div>";
+        for ($i=1;$i<=24;$i++){
+            echo "<div class='numberBlock notYet'><p><b>$i</b></p></div>";
+        }
+
+    ?>
     </div>
 
     [oweoeprweorpor<br/>koweojfiwejfwoeji
