@@ -7,6 +7,9 @@
 //// Inladen van de head en header
 //$templateParser->display("head.tpl");
 //$templateParser->display("header.tpl");
+
+require_once 'includes/config.php';
+require_once 'includes/database.php';
 //?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,16 +31,6 @@
 
 <div id="wrapper">
 
-<!--    <div id="dateBar">-->
-<!--            <ul>-->
-<!--                <li>Juli</li>-->
-<!--                <li><a href="#">1</a></li>-->
-<!--                <li><a href="#">2</a></li>-->
-<!--                <li><a href="#">3</a></li>-->
-<!--                <li><a href="#">4</a></li>-->
-<!--            </ul>-->
-<!--    </div>-->
-
     <div id="numberHolder">
     <?php
         echo "<div id='month' class='monthFont'>".date("M")."</div>";
@@ -48,7 +41,25 @@
     ?>
     </div>
 
-    [oweoeprweorpor<br/>koweojfiwejfwoeji
+    <div id="topText">
+        <h2>Vandaag in de Radio 1 Tour Top 100</h2>
+    </div>
+
+    <?php
+
+    $page = (empty($_GET['page'])) ? '' : $_GET['page'];
+
+    switch ($page) {
+        default:
+            require 'models/select_songs.php';
+            require 'views/display_songs.php';
+            require 'views/display_sidebar.html';
+    }
+    ?>
+
+
+
+
 </div>
 
 <footer>
