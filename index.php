@@ -29,14 +29,16 @@ require_once 'includes/database.php';
 
 </header>
 
-<div id="wrapper">
+<div id="mainWrapper">
 
     <div id="numberHolder">
     <?php
-        echo "<div id='month' class='monthFont'>".date("M")."</div>";
-        for ($i=1;$i<=24;$i++){
-            echo "<div class='numberBlock notYet'><p><b>$i</b></p></div>";
+    echo "<div id='dates'>";
+        echo "<div id='month' class='monthFont'>Juli</div>";
+        for ($i=2;$i<=24;$i++){
+            echo "<a href='?page=".$i."'><div class='numberBlock notYet'><p><b>$i</b></p></div></a>";
         }
+    echo "</div>";
 
     ?>
     </div>
@@ -47,13 +49,23 @@ require_once 'includes/database.php';
 
     <?php
 
-    $page = (empty($_GET['page'])) ? '' : $_GET['page'];
+    $page = (empty($_GET['page'])) ? '' : $_GET['page'] || 2;
 
     switch ($page) {
         default:
-            require 'models/select_songs.php';
+            require 'models/select_songs_index.php';
             require 'views/display_songs.php';
-            require 'views/display_sidebar.html';
+            require 'views/sidebar.php';
+
+        case '2':
+            require 'models/select_songs_index.php';
+            require 'views/display_songs.php';
+            require 'views/sidebar.php';
+            break;
+//        case 'completeTour':
+//            require 'models/select_songs_complete.php';
+//            require 'views/completeTour.php';
+//            break;
     }
     ?>
 
